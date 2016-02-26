@@ -1,0 +1,12 @@
+{% extends 'order_of_service/site_base.html' %}
+
+{% block head_title %}CenterClick-Order-Service{% endblock %}
+
+{% block body_class %}condominium_index{% endblock %}
+
+{% block body_base %}
+  <h1>Index Condominium</h1>
+  {% for group in request.user.groups.all %}
+  <ul>{{ group }}</ul>
+  {% endfor %}
+{% endblock %}
