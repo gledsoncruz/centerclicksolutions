@@ -7,16 +7,12 @@ BASE_DIR = PACKAGE_ROOT
 
 DEBUG = True
 
+import dj_database_url
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'gsolucoes',
-        'USER': 'gledson',
-        'PASSWORD': 'gledson',
-        'HOST': '127.0.0.1',
-        'PORT': '5432',
-    }
+    "default": dj_database_url.config()
 }
+db_from_env = dj_database_url.config()
+DATABASES['default'].update(db_from_env)
 
 ALLOWED_HOSTS = []
 
@@ -191,3 +187,8 @@ ACCOUNT_USE_AUTH_AUTHENTICATE = True
 AUTHENTICATION_BACKENDS = [
     "account.auth_backends.UsernameAuthenticationBackend",
 ]
+
+try:
+    from local_settings import *
+except ImportError:
+    pass
