@@ -1,5 +1,5 @@
 {% load centerclick_extras %}
-{% if request.user|has_group:"Order_Service" %}
+{% if request.user|has_group:"Order_Service" or request.user.is_superuser %}
 
 <ul class="nav navbar-nav">
   <li class="dropdown">
