@@ -1,0 +1,112 @@
+# -*- encoding: utf-8 -*-
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR gledson.cruz@gmail.com, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-02-28 10:59-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: centeclick/templates/_account_bar.html:11
+msgid "Settings"
+msgstr "Configurações"
+
+#: centeclick/templates/_account_bar.html:14
+msgid "Log out"
+msgstr "Sair"
+
+#: centeclick/templates/_account_bar.html:17
+msgid "Log in"
+msgstr "Entrar"
+
+#: centeclick/templates/_account_bar.html:19
+msgid "Sign up"
+msgstr "Cadastrar"
+
+#: centeclick/templates/_footer.html:3
+msgid "&copy; 2016 CenteClick Solutions"
+msgstr "&copy; 2016 CenteClick Soluções"
+
+#: centeclick/templates/homepage.html:13
+msgid "Welcome to CenterClick Solutions"
+msgstr "Bem vindo a CenterClick Soluções"
+
+#: centeclick/templates/homepage.html:15
+msgid ""
+"\n"
+"                In addition to what is provided by the \"zero\" project, "
+"this project\n"
+"                provides thorough integration with django-user-accounts, "
+"adding\n"
+"                comprehensive account management functionality. It is a "
+"foundation\n"
+"                suitable for most sites that have user accounts.\n"
+"                "
+msgstr ""
+
+#: centeclick/templates/homepage.html:29
+msgid ""
+"\n"
+"                    <h3>Condominium</h3>\n"
+"                    Condominium Management System is designed to meet all "
+"the needs of a commercial or residential.\n"
+"                    "
+msgstr ""
+"\n"
+"                    <h3>Condomínio</h3>\n"
+"                    Sistema de Gestão de Condomínios foi criado para atender "
+"a todas as necessidades de um condomínio comercial ou residencial.\n"
+"                    "
+
+#: centeclick/templates/homepage.html:36
+msgid ""
+"\n"
+"                    <h3>Order of Service</h3>\n"
+"                    Reusable apps provide common infrastructure, back-end "
+"functionality, and user-facing components.\n"
+"                    "
+msgstr ""
+"\n"
+"                    <h3>Ordem de Serviço</h3>\n"
+"                    Solicite uma Ordem de Serviço\n"
+"                    infrastructure, back-end functionality,\n"
+"                    and user-facing components.\n"
+"                    "
+
+#: centeclick/templates/homepage.html:43
+msgid ""
+"\n"
+"                    <h3>Reservation requests</h3>\n"
+"                    Themes provide default templates and stylesheets for "
+"quick prototyping and easy customization.\n"
+"                    "
+msgstr ""
+"\n"
+"                    <h3>Reserva de Pedidos</h3>\n"
+"                    <b>Themes</b> provide default templates and\n"
+"                    stylesheets for quick prototyping and easy "
+"customization.\n"
+"                    "
+
+#: condominium/templates/condominium/_menus.html:7
+msgid "Condominium"
+msgstr "Condomínio"
+
+#: order_of_service/templates/order_of_service/_menus.html:7
+msgid "Order of Service"
+msgstr "Ordem de Serviço"
+
+#~ msgid "Our Solutions"
+#~ msgstr "Nossas Soluções"

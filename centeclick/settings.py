@@ -1,3 +1,4 @@
+# -*- encoding: utf-8 -*-
 import os
 
 
@@ -23,7 +24,7 @@ ALLOWED_HOSTS = []
 # timezone as the operating system.
 # If running in a Windows environment this must be set to the same as your
 # system time zone.
-TIME_ZONE = "UTC"
+TIME_ZONE = "America/Sao_Paulo"
 
 # Language code for this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
@@ -34,6 +35,13 @@ SITE_ID = int(os.environ.get("SITE_ID", 1))
 # If you set this to False, Django will make some optimizations so as not
 # to load the internationalization machinery.
 USE_I18N = True
+
+LANGUAGES = (
+    ('en', u'English'),
+    ('pt-br', u'Português'),
+)
+
+LOCALE_PATHS = (os.path.join(PACKAGE_ROOT, "locale",),)
 
 # If you set this to False, Django will not format dates, numbers and
 # calendars according to the current locale.
@@ -106,6 +114,7 @@ MIDDLEWARE_CLASSES = [
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
+    "django.middleware.locale.LocaleMiddleware",
     "django.contrib.auth.middleware.SessionAuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",

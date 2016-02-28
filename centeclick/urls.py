@@ -12,6 +12,7 @@ urlpatterns = [
     url(r"^account/", include("account.urls")),
     url(r"^orderservice/", include('order_of_service.urls')),
     url(r"^condominium/", include('condominium.urls')),
+    url(r'^i18n/', include('django.conf.urls.i18n')),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
