@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-02-28 10:59-0300\n"
+"POT-Creation-Date: 2016-02-28 20:52-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -26,16 +26,224 @@ msgid "Log out"
 msgstr "Log out"
 
 #: centeclick/templates/_account_bar.html:17
+#: centeclick/templates/account/login.html:7
+#: centeclick/templates/account/login.html:19
+#: centeclick/templates/account/signup.html:23
 msgid "Log in"
 msgstr "Log in"
 
 #: centeclick/templates/_account_bar.html:19
+#: centeclick/templates/account/login.html:25
+#: centeclick/templates/account/signup.html:7
+#: centeclick/templates/account/signup.html:13
+#: centeclick/templates/account/signup.html:19
 msgid "Sign up"
 msgstr "Sign up"
 
-#: centeclick/templates/_footer.html:3
+#: centeclick/templates/_footer.html:7
 msgid "&copy; 2016 CenteClick Solutions"
 msgstr "&copy; 2016 CenteClick Solutions"
+
+#: centeclick/templates/_footer.html:10
+msgid "Language"
+msgstr "Language"
+
+#: centeclick/templates/account/email/email_confirmation_message.txt:1
+#, python-format
+msgid ""
+"A user on %(site_name)s has created an account using this email address.\n"
+"\n"
+"To confirm this email address, go to %(activate_url)s\n"
+"\n"
+"If you did not sign up for this site, you can ignore this message.\n"
+msgstr ""
+
+#: centeclick/templates/account/email/email_confirmation_subject.txt:1
+#, python-format
+msgid "Confirm email address for %(site_name)s"
+msgstr ""
+
+#: centeclick/templates/account/email/invite_user.txt:1
+#, python-format
+msgid ""
+"You have been invited to sign up at %(name)s.\n"
+"\n"
+"%(signup_url)s\n"
+msgstr ""
+
+#: centeclick/templates/account/email/invite_user_subject.txt:1
+#, python-format
+msgid "Create an account on %(name)s"
+msgstr ""
+
+#: centeclick/templates/account/email/password_change.txt:1
+#, python-format
+msgid ""
+"This is the email notification to confirm your password has been changed on "
+"%(now)s."
+msgstr ""
+
+#: centeclick/templates/account/email/password_change_subject.txt:1
+msgid "Change password email notification"
+msgstr ""
+
+#: centeclick/templates/account/email/password_reset.txt:1
+#, python-format
+msgid ""
+"You're receiving this email because you or someone else has requested a "
+"password for your user account at %(site_name)s.\n"
+"It can be safely ignored if you did not request a password reset. Click the "
+"link below to reset your password.\n"
+"\n"
+"%(password_reset_url)s\n"
+msgstr ""
+
+#: centeclick/templates/account/email/password_reset_subject.txt:1
+#, python-format
+msgid "[%(site_name)s] Password reset"
+msgstr ""
+
+#: centeclick/templates/account/email_confirm.html:5
+#: centeclick/templates/account/email_confirm.html:11
+msgid "Confirm Email"
+msgstr ""
+
+#: centeclick/templates/account/email_confirm.html:14
+#, python-format
+msgid "Confirm email address <b>%(email)s</b>?"
+msgstr ""
+
+#: centeclick/templates/account/email_confirm.html:15
+msgid "Confirm"
+msgstr ""
+
+#: centeclick/templates/account/email_confirmation_sent.html:5
+#: centeclick/templates/account/email_confirmation_sent.html:8
+msgid "Confirm your email address"
+msgstr ""
+
+#: centeclick/templates/account/email_confirmation_sent.html:10
+#, python-format
+msgid ""
+"We have sent you an email to <b>%(email)s</b> for verification. Follow the "
+"link provided to finalize the signup process. If you do not receive it "
+"within a few minutes, contact us at <a href=\"mailto:%(THEME_CONTACT_EMAIL)s"
+"\">%(THEME_CONTACT_EMAIL)s</a>."
+msgstr ""
+
+#: centeclick/templates/account/email_confirmation_sent.html:11
+msgid "Go back"
+msgstr ""
+
+#: centeclick/templates/account/email_confirmed.html:5
+#: centeclick/templates/account/email_confirmed.html:8
+msgid "Email confirmed"
+msgstr ""
+
+#: centeclick/templates/account/email_confirmed.html:9
+#, python-format
+msgid "You have confirmed <b>%(email)s</b>"
+msgstr ""
+
+#: centeclick/templates/account/login.html:13
+msgid "Log in to an existing account"
+msgstr "Log in to an existing account"
+
+#: centeclick/templates/account/login.html:20
+msgid "Forgot your password?"
+msgstr "Forgot your password?"
+
+#: centeclick/templates/account/login.html:25
+msgid "Don't have an account?"
+msgstr "Already have an account?"
+
+#: centeclick/templates/account/password_change.html:8
+#: centeclick/templates/account/password_change.html:14
+msgid "Change password"
+msgstr ""
+
+#: centeclick/templates/account/password_change.html:18
+#: centeclick/templates/account/password_reset_token.html:16
+#: centeclick/templates/account/settings.html:17
+msgid "Save"
+msgstr "Save"
+
+#: centeclick/templates/account/password_reset.html:7
+#: centeclick/templates/account/password_reset.html:15
+msgid "Password reset"
+msgstr ""
+
+#: centeclick/templates/account/password_reset.html:16
+msgid ""
+"Forgotten your password? Enter your email address below, and we'll send you "
+"an email allowing you to reset it."
+msgstr ""
+
+#: centeclick/templates/account/password_reset.html:22
+#, fuzzy
+#| msgid "Forgot your password?"
+msgid "Reset my password"
+msgstr "Forgot your password?"
+
+#: centeclick/templates/account/password_reset.html:29
+#, python-format
+msgid ""
+"If you have any trouble resetting your password, contact us at <a href="
+"\"mailto:%(THEME_CONTACT_EMAIL)s\">%(THEME_CONTACT_EMAIL)s</a>."
+msgstr ""
+
+#: centeclick/templates/account/password_reset_sent.html:6
+#: centeclick/templates/account/password_reset_sent.html:9
+msgid "Password reset sent"
+msgstr ""
+
+#: centeclick/templates/account/password_reset_sent.html:11
+#, python-format
+msgid ""
+"We have sent you an email. If you do not receive it within a few minutes, "
+"try resending or contact us at <a href=\"mailto:%(THEME_CONTACT_EMAIL)s\">"
+"%(THEME_CONTACT_EMAIL)s</a>."
+msgstr ""
+
+#: centeclick/templates/account/password_reset_sent.html:20
+msgid "Resend"
+msgstr ""
+
+#: centeclick/templates/account/password_reset_sent.html:25
+#, python-format
+msgid ""
+"We have resent the password email. If you do not receive it within a few "
+"minutes, contact us at <a href=\"mailto:%(THEME_CONTACT_EMAIL)s\">"
+"%(THEME_CONTACT_EMAIL)s</a>."
+msgstr ""
+
+#: centeclick/templates/account/password_reset_token.html:6
+#: centeclick/templates/account/password_reset_token.html:12
+#, fuzzy
+#| msgid "Forgot your password?"
+msgid "Set your new password"
+msgstr "Forgot your password?"
+
+#: centeclick/templates/account/password_reset_token_fail.html:5
+#: centeclick/templates/account/password_reset_token_fail.html:8
+msgid "Bad token"
+msgstr ""
+
+#: centeclick/templates/account/password_reset_token_fail.html:10
+#, python-format
+msgid ""
+"The password reset link was invalid, possibly because it has already been "
+"used.  Please request a <a href=\"%(url)s\">new password reset</a>."
+msgstr ""
+
+#: centeclick/templates/account/settings.html:8
+#: centeclick/templates/account/settings.html:14
+msgid "Account"
+msgstr "Account"
+
+#: centeclick/templates/account/signup.html:23
+msgid "Already have an account?"
+msgstr "Already have an account?"
 
 #: centeclick/templates/homepage.html:13
 msgid "Welcome to CenterClick Solutions"
