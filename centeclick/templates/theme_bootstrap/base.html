@@ -26,14 +26,14 @@
 
             {% block topbar_base %}
                 <header>
-                    <div class="navbar navbar-inverse {% block navbar_class %}navbar-fixed-top{% endblock %}">
+                    <div class="navbar navbar-custom {% block navbar_class %}navbar-fixed-top{% endblock %}">
 
                         {% block topbar %}
                             <div class="navbar-header">
                                 <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                                     <span class="fa fa-bars"></span>
                                 </button>
-                                {% block site_brand %}<a class="navbar-brand" href="{% url "home" %}">{{ SITE_NAME }}</a>{% endblock %}
+                                {% block site_brand %}<a class="navbar-brand" href="{% url "home" %}"><i class="fa fa-mouse-pointer" style="padding-right: 10px;"></i>{{ SITE_NAME }}</a>{% endblock %}
                             </div>
                             <div class="collapse navbar-collapse navbar-responsive-collapse">
                                 {% block nav %}

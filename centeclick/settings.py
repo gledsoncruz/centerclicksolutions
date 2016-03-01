@@ -38,7 +38,7 @@ USE_I18N = True
 
 LANGUAGES = (
     ('en', u'English'),
-    ('pt-br', u'Português'),
+    ('pt-br', u'Português Brasileiro'),
 )
 
 LOCALE_PATHS = (os.path.join(PACKAGE_ROOT, "locale",),)
@@ -193,7 +193,7 @@ EMAIL_HOST_USER = os.environ['GMAIL_USERNAME']
 EMAIL_HOST_PASSWORD = os.environ['GMAIL_PASSWORD']
 EMAIL_PORT = 587
 
-ACCOUNT_OPEN_SIGNUP = True
+ACCOUNT_OPEN_SIGNUP = False
 ACCOUNT_EMAIL_UNIQUE = True
 ACCOUNT_EMAIL_CONFIRMATION_REQUIRED = True
 ACCOUNT_LOGIN_REDIRECT_URL = "home"
