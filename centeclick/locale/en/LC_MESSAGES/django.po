@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-02-28 20:52-0300\n"
+"POT-Creation-Date: 2016-03-02 14:28-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,6 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: centeclick/templates/_account_bar.html:11
+#: centeclick/templates/account/base.html:9
 msgid "Settings"
 msgstr "Settings"
 
@@ -47,6 +48,28 @@ msgstr "&copy; 2016 CenteClick Solutions"
 #: centeclick/templates/_footer.html:10
 msgid "Language"
 msgstr "Language"
+
+#: centeclick/templates/account/base.html:12
+#: centeclick/templates/account/settings.html:8
+#: centeclick/templates/account/settings.html:14
+msgid "Account"
+msgstr "Account"
+
+#: centeclick/templates/account/base.html:15
+#: centeclick/templates/account/password_change.html:8
+#: centeclick/templates/account/password_change.html:14
+msgid "Change password"
+msgstr ""
+
+#: centeclick/templates/account/base.html:18
+#, fuzzy
+#| msgid "Don't have an account?"
+msgid "Delete account"
+msgstr "Already have an account?"
+
+#: centeclick/templates/account/base.html:21
+msgid "Personal Data"
+msgstr ""
 
 #: centeclick/templates/account/email/email_confirmation_message.txt:1
 #, python-format
@@ -157,11 +180,6 @@ msgstr "Forgot your password?"
 msgid "Don't have an account?"
 msgstr "Already have an account?"
 
-#: centeclick/templates/account/password_change.html:8
-#: centeclick/templates/account/password_change.html:14
-msgid "Change password"
-msgstr ""
-
 #: centeclick/templates/account/password_change.html:18
 #: centeclick/templates/account/password_reset_token.html:16
 #: centeclick/templates/account/settings.html:17
@@ -236,11 +254,6 @@ msgid ""
 "used.  Please request a <a href=\"%(url)s\">new password reset</a>."
 msgstr ""
 
-#: centeclick/templates/account/settings.html:8
-#: centeclick/templates/account/settings.html:14
-msgid "Account"
-msgstr "Account"
-
 #: centeclick/templates/account/signup.html:23
 msgid "Already have an account?"
 msgstr "Already have an account?"
@@ -289,7 +302,11 @@ msgid ""
 "                    "
 msgstr ""
 
-#: condominium/templates/condominium/_menus.html:7
+#: condominium/templates/condominium/_form.html:7
+msgid "Customer"
+msgstr ""
+
+#: condominium/templates/condominium/_menus.html:6
 msgid "Condominium"
 msgstr "Condominium"
 

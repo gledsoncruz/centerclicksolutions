@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-02-28 20:52-0300\n"
+"POT-Creation-Date: 2016-03-02 14:28-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,6 +20,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: centeclick/templates/_account_bar.html:11
+#: centeclick/templates/account/base.html:9
 msgid "Settings"
 msgstr "Configurações"
 
@@ -49,6 +50,28 @@ msgstr "&copy; 2016 CenteClick Soluções"
 #: centeclick/templates/_footer.html:10
 msgid "Language"
 msgstr "Idioma"
+
+#: centeclick/templates/account/base.html:12
+#: centeclick/templates/account/settings.html:8
+#: centeclick/templates/account/settings.html:14
+msgid "Account"
+msgstr "Conta"
+
+#: centeclick/templates/account/base.html:15
+#: centeclick/templates/account/password_change.html:8
+#: centeclick/templates/account/password_change.html:14
+msgid "Change password"
+msgstr "Alterar senha"
+
+#: centeclick/templates/account/base.html:18
+#, fuzzy
+#| msgid "Don't have an account?"
+msgid "Delete account"
+msgstr "Ainda não possui uma conta?"
+
+#: centeclick/templates/account/base.html:21
+msgid "Personal Data"
+msgstr "Dados Pessoais"
 
 #: centeclick/templates/account/email/email_confirmation_message.txt:1
 #, python-format
@@ -167,11 +190,6 @@ msgstr "Esqueceu sua senha?"
 msgid "Don't have an account?"
 msgstr "Ainda não possui uma conta?"
 
-#: centeclick/templates/account/password_change.html:8
-#: centeclick/templates/account/password_change.html:14
-msgid "Change password"
-msgstr "Alterar senha"
-
 #: centeclick/templates/account/password_change.html:18
 #: centeclick/templates/account/password_reset_token.html:16
 #: centeclick/templates/account/settings.html:17
@@ -255,11 +273,6 @@ msgstr ""
 "usado.  Por favor, solicite uma <a href=\"%(url)s\">nova redefinição de "
 "senha</a>."
 
-#: centeclick/templates/account/settings.html:8
-#: centeclick/templates/account/settings.html:14
-msgid "Account"
-msgstr "Conta"
-
 #: centeclick/templates/account/signup.html:23
 msgid "Already have an account?"
 msgstr "Já possui uma conta?"
@@ -325,7 +338,11 @@ msgstr ""
 "customization.\n"
 "                    "
 
-#: condominium/templates/condominium/_menus.html:7
+#: condominium/templates/condominium/_form.html:7
+msgid "Customer"
+msgstr "Cliente"
+
+#: condominium/templates/condominium/_menus.html:6
 msgid "Condominium"
 msgstr "Condomínio"
 

@@ -5,16 +5,8 @@
 
 body.account-delete .account-delete,
 body.account-password .account-password,
-body.account-settings .account-settings {
-    z-index: 1;
-    color: #fff;
-    background-color: #368191;
-    border-color: #368191;
-}
-
-body.condominium_index .condominium-pessoas,
-body.condominium_unidades .condominium-unidades,
-body.condominium_agenda .condominium-agenda {
+body.account-settings .account-settings,
+body.account-personal-edit-data .account-personal-edit-data {
     z-index: 1;
     color: #fff;
     background-color: #368191;
