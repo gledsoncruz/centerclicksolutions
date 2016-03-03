@@ -7,9 +7,15 @@ from django.db import models
 
 class Customer(models.Model):
   user = models.OneToOneField(User, on_delete=models.CASCADE)
-  cpf = models.CharField(max_length=15)
+  cpf = models.CharField(max_length=15, unique=True)
   cel = models.CharField(max_length=15)
   dta_nasc = models.DateField(default=date.today)
+  address = models.CharField(max_length=80, default='')
+  number = models.CharField(max_length=5, default='')
+  compl = models.CharField(max_length=50, null=True)
+  state = models.CharField(max_length=50, default='')
+  city = models.CharField(max_length=80, default='')
+  cep = models.CharField(max_length=10, default='')
   created_at = models.DateTimeField(auto_now_add=True)
   updated_at = models.DateTimeField(auto_now=True)
 

@@ -206,6 +206,8 @@ AUTHENTICATION_BACKENDS = [
     "account.auth_backends.UsernameAuthenticationBackend",
 ]
 
+VALID_CPF = True
+
 try:
     from local_settings import *
 except ImportError:
