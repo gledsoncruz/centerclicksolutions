@@ -7,7 +7,7 @@ const rev  = require('gulp-rev');
 /**
  * Module body / Expose
  */
-module.exports = (entry, config) => {
+module.exports = function(entry, config) {
   config = config || {};
   return gulp.src(entry)
     .pipe(rev());

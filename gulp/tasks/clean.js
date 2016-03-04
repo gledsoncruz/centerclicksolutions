@@ -6,7 +6,7 @@ const del = require('del');
 /**
  * Module body / Expose
  */
-module.exports = (entry, config) => {
+module.exports = function(entry, config) {
   config = config || {};
   return del(entry, config);
 };

@@ -3,7 +3,7 @@ const uglify = require('gulp-uglify');
 const size   = require('gulp-size');
 
 
-module.exports = (source, options, dist) => {
+module.exports = function(source, options, dist) {
     return gulp.src(source)
         .pipe(uglify(options))
         .pipe(gulp.dest(dist))

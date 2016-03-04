@@ -3,7 +3,7 @@ const nano = require('gulp-cssnano');
 const size = require('gulp-size');
 
 
-module.exports = (source, options, dist) => {
+module.exports = function(source, options, dist) {
     return gulp.src(source)
         .pipe(nano(options))
         .pipe(gulp.dest(dist))

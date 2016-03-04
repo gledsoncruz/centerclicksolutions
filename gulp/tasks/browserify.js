@@ -9,7 +9,7 @@ const source     = require('vinyl-source-stream');
 /**
  * Module body / Expose
  */
-module.exports = (entry, config) => {
+module.exports = function(entry, config) {
   config = config || {};
   const built = browserify(entry)
     .transform(babelify);

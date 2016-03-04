@@ -12,10 +12,7 @@ def condominium_index(request):
   form = CustomerForm()
   return render(request, 'condominium/index.html', {'form': form})
 
-def condominium_new(request):
-  return render(request, 'condominium/condominium_new.html', {})
-
-def condominium_new_or_edit(request):
+def customer_new_or_edit(request):
   current_user = request.user
   try:
     customer = Customer.objects.get(user=current_user)
@@ -24,10 +21,10 @@ def condominium_new_or_edit(request):
       if form.is_valid():
         customer = form.save()
         messages.success(request, 'Dados pessoais atualizados')
-        return redirect('condominium_new_or_edit')
+        return redirect('customer_new_or_edit')
     else:
       form = CustomerForm(instance=customer)
-    return render(request, 'condominium/condominium_edit.html', {'form': form})
+    return render(request, 'condominium/customer_edit.html', {'form': form})
   except ObjectDoesNotExist:
     if request.method == "POST":
       form = CustomerForm(request.POST)
@@ -36,10 +33,10 @@ def condominium_new_or_edit(request):
         customer.user = current_user
         customer.save()
         messages.success(request, 'Dados pessoais atualizados')
-        return redirect('condominium_new_or_edit')
+        return redirect('customer_new_or_edit')
     else:
       form = CustomerForm()
-    return render(request, 'condominium/condominium_edit.html', {'form': form})
+    return render(request, 'condominium/customer_edit.html', {'form': form})
 
 
 

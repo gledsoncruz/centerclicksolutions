@@ -8,7 +8,7 @@ const prefix = require('gulp-autoprefixer');
 /**
  * Module body
  */
-module.exports = (entry, config) => {
+module.exports = function(entry, config) {
   config = config || {};
   config.less = config.less || {};
   config.autoprefixer = config.autoprefixer || {};

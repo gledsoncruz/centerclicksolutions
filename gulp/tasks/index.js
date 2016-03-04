@@ -26,9 +26,13 @@ const tasks = [
   'optimizecss'
 ];
 
-tasks.forEach(task => {
+/*tasks.forEach(task => {
+  modules[task] = load(task);
+});*/
+tasks.forEach(function(task){
   modules[task] = load(task);
 });
+
 
 /**
  * Expose

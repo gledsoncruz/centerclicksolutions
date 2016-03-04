@@ -13,4 +13,6 @@ class CustomerForm(forms.ModelForm):
   class Meta:
     model = Customer
     fields = ('cpf', 'cel', 'dta_nasc', 'address', 'number', 'compl', 'state', 'city', 'cep', )
-    widgets = {'dta_nasc': forms.DateInput(attrs={'class':'datepicker'})}
+    widgets = {
+      'dta_nasc': forms.DateInput(attrs={'class':'datepicker'}),
+      }

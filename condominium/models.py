@@ -12,7 +12,7 @@ class Customer(models.Model):
   dta_nasc = models.DateField(default=date.today)
   address = models.CharField(max_length=80, default='')
   number = models.CharField(max_length=5, default='')
-  compl = models.CharField(max_length=50, null=True)
+  compl = models.CharField(max_length=50, blank=True)
   state = models.CharField(max_length=50, default='')
   city = models.CharField(max_length=80, default='')
   cep = models.CharField(max_length=10, default='')
