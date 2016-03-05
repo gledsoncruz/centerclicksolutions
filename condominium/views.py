@@ -12,6 +12,7 @@ def condominium_index(request):
   form = CustomerForm()
   return render(request, 'condominium/index.html', {'form': form})
 
+@login_required(login_url='/account/login/')
 def customer_new_or_edit(request):
   current_user = request.user
   try:

@@ -1,29 +1,29 @@
 {% load i18n %}
 
 <footer class="footer">
-      <div class="container">
-        <div class="row">
-          <div class="col-xs-12 col-sm-12 col-md-8">
-            {% trans "&copy; 2016 CenteClick Solutions" %}
-          </div>
-          <div class="col-xs-12 col-sm-12 col-md-4">
-            <label class="hidden">{% trans "Language" %}</label>
-            {% if csrf_token != "NOTPROVIDED" %}
-            {% get_current_language as LANGUAGE %}
-            <form class="form-inline" action="/i18n/setlang/" method="post">
-              {% csrf_token %}
-              <div class="form-group">
-                <select class="form-control" name="language" onchange="javascript:form.submit()">
-                  {% for lang in LANGUAGES %}
-                  <option value="{{ lang.0 }}" {% ifequal LANGUAGE_CODE lang.0 %} selected="selected"{% endifequal %}>
-                    {{ lang.1 }}
-                  </option>
-                  {% endfor %}
-                </select>
-              </div>
-            </form>
-            {% endif %}
-          </div>
-        </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-8">
+        {% trans "&copy; CenterClick Solutions" %} - {% now "Y" %}
       </div>
-    </footer>
+      <div class="col-xs-12 col-sm-12 col-md-4">
+        <label class="hidden">{% trans "Language" %}</label>
+        {% if csrf_token != "NOTPROVIDED" %}
+          {% get_current_language as LANGUAGE %}
+          <form class="form-horizontal" action="/i18n/setlang/" method="post">
+            {% csrf_token %}
+            <div class="form-group">
+              <select class="form-control" name="language" onchange="javascript:form.submit()">
+                {% for lang in LANGUAGES %}
+                <option value="{{ lang.0 }}" {% ifequal LANGUAGE_CODE lang.0 %} selected="selected"{% endifequal %}>
+                  {{ lang.1 }}
+                </option>
+                {% endfor %}
+              </select>
+            </div>
+          </form>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</footer>

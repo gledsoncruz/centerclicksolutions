@@ -19,5 +19,8 @@ class Customer(models.Model):
   created_at = models.DateTimeField(auto_now_add=True)
   updated_at = models.DateTimeField(auto_now=True)
 
+  class Meta:
+    verbose_name = "Dados Pessoais"
+
   def __unicode__(self):
     return self.user.email

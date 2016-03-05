@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-02 14:28-0300\n"
+"POT-Creation-Date: 2016-03-04 22:47-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -42,7 +42,9 @@ msgid "Sign up"
 msgstr "Sign up"
 
 #: centeclick/templates/_footer.html:7
-msgid "&copy; 2016 CenteClick Solutions"
+#, fuzzy
+#| msgid "&copy; 2016 CenteClick Solutions"
+msgid "&copy; CenterClick Solutions"
 msgstr "&copy; 2016 CenteClick Solutions"
 
 #: centeclick/templates/_footer.html:10
@@ -52,6 +54,8 @@ msgstr "Language"
 #: centeclick/templates/account/base.html:12
 #: centeclick/templates/account/settings.html:8
 #: centeclick/templates/account/settings.html:14
+#: condominium/templates/condominium/customer_edit.html:8
+#: condominium/templates/condominium/customer_new.html:8
 msgid "Account"
 msgstr "Account"
 
@@ -62,14 +66,15 @@ msgid "Change password"
 msgstr ""
 
 #: centeclick/templates/account/base.html:18
+#: condominium/templates/condominium/_form.html:8
+msgid "Personal Data"
+msgstr ""
+
+#: centeclick/templates/account/base.html:21
 #, fuzzy
 #| msgid "Don't have an account?"
 msgid "Delete account"
 msgstr "Already have an account?"
-
-#: centeclick/templates/account/base.html:21
-msgid "Personal Data"
-msgstr ""
 
 #: centeclick/templates/account/email/email_confirmation_message.txt:1
 #, python-format
@@ -300,10 +305,6 @@ msgid ""
 "                    Themes provide default templates and stylesheets for "
 "quick prototyping and easy customization.\n"
 "                    "
-msgstr ""
-
-#: condominium/templates/condominium/_form.html:7
-msgid "Customer"
 msgstr ""
 
 #: condominium/templates/condominium/_menus.html:6
