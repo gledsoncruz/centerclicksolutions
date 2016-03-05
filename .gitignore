@@ -5,3 +5,5 @@ dev.db
 site_media/
 centeclick/local_settings.py
 *.DS_Store
+*.html.py
+django1.9/
