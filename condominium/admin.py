@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 
 # Register your models here.
 
-from .models import Customer
+from .models import Customer, Condominium
 
 class CustomerInline(admin.StackedInline):
   model = Customer
@@ -14,7 +14,11 @@ class CustomerInline(admin.StackedInline):
 class UserAdmin(BaseUserAdmin):
   inlines = (CustomerInline, )
 
+class CondominiumAdmin(admin.ModelAdmin):
+  pass
+
 admin.site.unregister(User)
 admin.site.register(User, UserAdmin)
+admin.site.register(Condominium, CondominiumAdmin)
 
 

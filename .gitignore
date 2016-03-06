@@ -7,3 +7,4 @@ centeclick/local_settings.py
 *.DS_Store
 *.html.py
 django1.9/
+.idea
