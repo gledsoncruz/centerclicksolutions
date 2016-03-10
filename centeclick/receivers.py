@@ -7,13 +7,15 @@ from account.signals import user_sign_up_attempt, user_signed_up
 from account.signals import user_login_attempt, user_logged_in
 
 from pinax.eventlog.models import log
-from centeclick.telegram_bot import Telegram_Bot
+import telebot
+from django.conf import settings
 
-telegram = Telegram_Bot()
+bot = telebot.TeleBot(settings.TELEGRAM_BOT_TOKEN)
+chat_group_id = settings.TELEGRAM_CHAT_GROUP_ID
 
 @receiver(user_logged_in)
 def handle_user_logged_in(sender, **kwargs):
-    telegram.send_message('Usuário: {!s} acabou de logar no sistema.'.format(kwargs.get("user")))
+    bot.send_message(chat_group_id,'Usuário: {!s} acabou de logar no sistema.'.format(kwargs.get("user")))
     log(
         user=kwargs.get("user"),
         action="USER_LOGGED_IN",
@@ -23,7 +25,7 @@ def handle_user_logged_in(sender, **kwargs):
 
 @receiver(password_changed)
 def handle_password_changed(sender, **kwargs):
-    telegram.send_message('Usuário: {!s} acabou de alterar sua senha.'.format(kwargs.get("user")))
+    bot.send_message(chat_group_id, 'Usuário: {!s} acabou de alterar sua senha.'.format(kwargs.get("user")))
     log(
         user=kwargs.get("user"),
         action="PASSWORD_CHANGED",
@@ -33,7 +35,7 @@ def handle_password_changed(sender, **kwargs):
 
 @receiver(user_login_attempt)
 def handle_user_login_attempt(sender, **kwargs):
-    telegram.send_message('Tentativa de login do usuário: {!s}'.format(kwargs.get("username")))
+    bot.send_message(chat_group_id,'Tentativa de login do usuário: {!s}'.format(kwargs.get("username")))
     log(
         user=None,
         action="LOGIN_ATTEMPTED",
@@ -59,7 +61,7 @@ def handle_user_sign_up_attempt(sender, **kwargs):
 
 @receiver(user_signed_up)
 def handle_user_signed_up(sender, **kwargs):
-    telegram.send_message('Usuário: {!s} acabou de se cadastrar no sistema.'.format(kwargs.get("user")))
+    bot.send_message(chat_group_id,'Usuário: {!s} acabou de se cadastrar no sistema.'.format(kwargs.get("user")))
     log(
         user=kwargs.get("user"),
         action="USER_SIGNED_UP",
