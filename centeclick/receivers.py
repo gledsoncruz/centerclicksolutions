@@ -1,3 +1,5 @@
+
+# -*- coding: utf-8 -*-
 from django.dispatch import receiver
 
 from account.signals import password_changed
@@ -5,10 +7,13 @@ from account.signals import user_sign_up_attempt, user_signed_up
 from account.signals import user_login_attempt, user_logged_in
 
 from pinax.eventlog.models import log
+from centeclick.telegram_bot import Telegram_Bot
 
+telegram = Telegram_Bot()
 
 @receiver(user_logged_in)
 def handle_user_logged_in(sender, **kwargs):
+    telegram.send_message('Usuário: {!s} acabou de logar no sistema.'.format(kwargs.get("user")))
     log(
         user=kwargs.get("user"),
         action="USER_LOGGED_IN",
@@ -18,6 +23,7 @@ def handle_user_logged_in(sender, **kwargs):
 
 @receiver(password_changed)
 def handle_password_changed(sender, **kwargs):
+    telegram.send_message('Usuário: {!s} acabou de alterar sua senha.'.format(kwargs.get("user")))
     log(
         user=kwargs.get("user"),
         action="PASSWORD_CHANGED",
@@ -27,6 +33,7 @@ def handle_password_changed(sender, **kwargs):
 
 @receiver(user_login_attempt)
 def handle_user_login_attempt(sender, **kwargs):
+    telegram.send_message('Tentativa de login do usuário: {!s}'.format(kwargs.get("username")))
     log(
         user=None,
         action="LOGIN_ATTEMPTED",
@@ -52,6 +59,7 @@ def handle_user_sign_up_attempt(sender, **kwargs):
 
 @receiver(user_signed_up)
 def handle_user_signed_up(sender, **kwargs):
+    telegram.send_message('Usuário: {!s} acabou de se cadastrar no sistema.'.format(kwargs.get("user")))
     log(
         user=kwargs.get("user"),
         action="USER_SIGNED_UP",

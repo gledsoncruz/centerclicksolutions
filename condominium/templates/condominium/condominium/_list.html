@@ -1,0 +1,48 @@
+{% load i18n %}
+
+<div class="row">
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    <a class="btn btn-primary pull-right" href="{% url 'condominium_new' %}" role="button">{% trans "New" %}</a>
+  </div>
+</div>
+</br>
+<div class="table-responsive">
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>{% trans "Razao Social" %}</th>
+        <th>{% trans "CNPJ" %}</th>
+        <th>{% trans "Address" %}</th>
+        <th>{% trans "Tel" %}</th>
+        <th>{% trans "City" %}</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for cond in condominiums %}
+    <tr>
+      <td>{{ cond.rsocial}}</td>
+      <td>{{ cond.cnpj}}</td>
+      <td>{{ cond.address}}</td>
+      <td>{{ cond.tel}}</td>
+      <td>{{ cond.city}}</td>
+    </tr>
+
+    {% endfor %}
+    </tbody>
+  </table>
+  <div class="pagination">
+    <span class="step-links">
+        {% if condominiums.has_previous %}
+            <a href="?page={{ condominiums.previous_page_number }}">Anterior</a>
+        {% endif %}
+
+        <span class="current">
+            Page {{ condominiums.number }} of {{ condominiums.paginator.num_pages }}.
+        </span>
+
+        {% if condominiums.has_next %}
+            <a href="?page={{ condominiums.next_page_number }}">Próximo</a>
+        {% endif %}
+    </span>
+  </div>
+</div>

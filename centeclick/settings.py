@@ -207,6 +207,9 @@ AUTHENTICATION_BACKENDS = [
 ]
 
 VALID_CPF = True
+VALID_CNPJ = True
+TELEGRAM_BOT_TOKEN = os.environ['TELEGRAM_BOT_TOKEN']
+TELEGRAM_CHAT_GROUP_ID = os.environ['TELEGRAM_CHAT_GROUP_ID']
 
 try:
     from local_settings import *

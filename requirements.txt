@@ -6,3 +6,4 @@ pinax-eventlog==1.1.1
 django-toolbelt
 dj-database-url
 django-localflavor
+pyTelegramBotAPI

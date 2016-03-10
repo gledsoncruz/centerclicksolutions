@@ -6,7 +6,6 @@ from django.db import models
 
 # Create your models here.
 
-
 class Customer(models.Model):
   user = models.OneToOneField(User, on_delete=models.CASCADE)
   cpf = models.CharField(max_length=15, unique=True)
@@ -14,7 +13,7 @@ class Customer(models.Model):
   dta_nasc = models.DateField(default=date.today)
   address = models.CharField(max_length=80, default='')
   number = models.CharField(max_length=5, default='')
-  compl = models.CharField(max_length=50, blank=True)
+  compl = models.CharField(max_length=50, blank=True, default='')
   state = models.CharField(max_length=50, default='')
   city = models.CharField(max_length=80, default='')
   cep = models.CharField(max_length=10, default='')
@@ -29,13 +28,13 @@ class Customer(models.Model):
 
 
 class Condominium(models.Model):
-  customer = models.ForeignKey(Customer, on_delete=models.CASCADE)
+  user = models.ForeignKey(User, on_delete=models.CASCADE)
   rsocial = models.CharField(max_length=80)
   cnpj = models.CharField(max_length=20, unique=True)
   tel = models.CharField(max_length=15)
   address = models.CharField(max_length=80)
   number = models.CharField(max_length=5, blank=True)
-  compl = models.CharField(max_length=50)
+  compl = models.CharField(max_length=50, blank=True)
   state = models.CharField(max_length=50)
   city = models.CharField(max_length=50)
   cep = models.CharField(max_length=10)
@@ -43,8 +42,8 @@ class Condominium(models.Model):
   updated_at = models.DateTimeField(auto_now=True)
 
   class Meta:
-      verbose_name = "Condominio"
-      verbose_name_plural = "Condominios"
+    verbose_name = "Condominio"
+    verbose_name_plural = "Condominios"
 
   def __unicode__(self):
-      return self.rsocial
+    return self.rsocial

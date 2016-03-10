@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-04 22:47-0300\n"
+"POT-Creation-Date: 2016-03-08 17:47-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -44,7 +44,6 @@ msgid "Sign up"
 msgstr "Cadastrar"
 
 #: centeclick/templates/_footer.html:7
-
 msgid "&copy; CenterClick Solutions"
 msgstr "&copy; CenterClick Soluções"
 
@@ -72,6 +71,10 @@ msgid "Personal Data"
 msgstr "Dados Pessoais"
 
 #: centeclick/templates/account/base.html:21
+msgid "Condominium Data"
+msgstr "Dados do Condomínio"
+
+#: centeclick/templates/account/base.html:24
 msgid "Delete account"
 msgstr "Deletar conta"
 
@@ -91,10 +94,12 @@ msgstr ""
 "Se você não se inscreveu para este site, você pode ignorar esta mensagem.\n"
 
 #: centeclick/templates/account/email/email_confirmation_subject.txt:1
+#, python-format
 msgid "Confirm email address for %(site_name)s"
 msgstr "Confirmar endereço de email %(site_name)s"
 
 #: centeclick/templates/account/email/invite_user.txt:1
+#, python-format
 msgid ""
 "You have been invited to sign up at %(name)s.\n"
 "\n"
@@ -103,22 +108,28 @@ msgstr ""
 "Você foi convidado para se inscrever no %(name)s.\n"
 "\n"
 "%(signup_url)s\n"
+
 #: centeclick/templates/account/email/invite_user_subject.txt:1
+#, fuzzy, python-format
+#| msgid "Create an account on %(name)s"
 msgid "Create an account on %(name)s"
 msgstr "Criar uma conta em"
 
 #: centeclick/templates/account/email/password_change.txt:1
+#, python-format
 msgid ""
 "This is the email notification to confirm your password has been changed on "
 "%(now)s."
 msgstr ""
 "Esta é a notificação de e-mail para confirmar a sua senha foi alterada em "
 "%(now)s."
+
 #: centeclick/templates/account/email/password_change_subject.txt:1
 msgid "Change password email notification"
 msgstr "Notificação de alteração de senha"
 
 #: centeclick/templates/account/email/password_reset.txt:1
+#, python-format
 msgid ""
 "You're receiving this email because you or someone else has requested a "
 "password for your user account at %(site_name)s.\n"
@@ -127,10 +138,10 @@ msgid ""
 "\n"
 "%(password_reset_url)s\n"
 msgstr ""
-"Você está recebendo este e-mail porque você ou alguém pediu uma "
-"senha para a sua conta de usuário em %(site_name)s.\n"
-"Ele pode ser ignorado se não solicitar uma nova senha. Clique no "
-"link abaixo para redefinir sua senha.\n"
+"Você está recebendo este e-mail porque você ou alguém pediu uma senha para a "
+"sua conta de usuário em %(site_name)s.\n"
+"Ele pode ser ignorado se não solicitar uma nova senha. Clique no link abaixo "
+"para redefinir sua senha.\n"
 "%(password_reset_url)s\n"
 
 #: centeclick/templates/account/email/password_reset_subject.txt:1
