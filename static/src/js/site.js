@@ -20,5 +20,9 @@ $(() => {
     $('#id_cpf').mask('999.999.999-99');
     $('#id_cel').mask('(99) 99999-9999');
     $('#id_cep').mask('99999-999');
+  } else if ($('body').hasClass('account account-condominium-list')) {
+    $('#id_cnpj').mask('99.999.999/9999-99');
+    $('#id_cep').mask('99999-999');
+    $('#id_tel').mask('(99) 9999-9999');
   }
 });
