@@ -27,8 +27,5 @@ class CondominiumForm(forms.ModelForm):
   class Meta:
     model = Condominium
     fields = ('rsocial', 'cnpj', 'tel', 'address', 'number', 'compl', 'state', 'city', 'cep', )
-    widgets = {
-      'dta_nasc': forms.DateInput(attrs={'class':'datepicker'}),
-      }
 
 

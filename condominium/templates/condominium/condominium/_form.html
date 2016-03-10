@@ -7,11 +7,46 @@
     <form method="POST" class="post-form" role="form">
       <legend>{% trans "Condominium Data" %}</legend>
       {% csrf_token %}
-      {{ form|bootstrap }}
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+          {{ form.cnpj|bootstrap }}
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+          {{ form.rsocial|bootstrap }}
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+          {{ form.tel|bootstrap }}
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+          {{ form.address|bootstrap }}
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+          {{ form.number|bootstrap }}
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
+          {{ form.compl|bootstrap }}
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+          {{ form.state|bootstrap }}
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+          {{ form.city|bootstrap }}
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+          {{ form.cep|bootstrap }}
+        </div>
+      </div>
+
       <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
           <div class="form-group">
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary">{% trans "Save" %}</button>
           </div>
         </div>
       </div>

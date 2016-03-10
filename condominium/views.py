@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.core.exceptions import ObjectDoesNotExist
@@ -44,7 +44,19 @@ def customer_new_or_edit(request):
 '''
 CONDOMINIUM
 '''
-
+@login_required(login_url='/account/login/')
+def condominium_edit(request, pk):
+  cond = get_object_or_404(Condominium, pk=pk)
+  print cond
+  if request.method == "POST":
+    form = CondominiumForm(request.POST, instance=cond)
+    if form.is_valid():
+      cond = form.save()
+      messages.success(request, 'Dados atualizados com sucesso')
+      return redirect('condominium_list')
+  else:
+    form = CondominiumForm(instance=cond)
+  return render(request, 'condominium/condominium/condominium_edit.html', {'form': form})
 
 @login_required(login_url='/account/login/')
 def condominium_new(request):
