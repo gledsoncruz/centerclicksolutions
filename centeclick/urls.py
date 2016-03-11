@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from django.conf import settings
 from django.conf.urls import include, url
 from django.conf.urls.static import static
@@ -10,9 +11,10 @@ urlpatterns = [
     url(r"^$", TemplateView.as_view(template_name="homepage.html"), name="home"),
     url(r"^admin/", include(admin.site.urls)),
     url(r"^account/", include("account.urls")),
-    url(r"^orderservice/", include('order_of_service.urls')),
     url(r"^condominium/", include('condominium.urls')),
     url(r'^i18n/', include('django.conf.urls.i18n')),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+admin.site.site_header = 'CenterClick Administração'
+admin.site.site_title = 'CenterClick Administração'

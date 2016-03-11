@@ -6,8 +6,23 @@ from django.db import models
 
 # Create your models here.
 
+class Plan(models.Model):
+  desc = models.CharField(max_length=50)
+  sigla = models.CharField(max_length=10)
+  price = models.DecimalField(max_digits=8, decimal_places=2)
+  condominium_count = models.IntegerField(default=1)
+  created_at = models.DateTimeField(auto_now_add=True)
+  updated_at = models.DateTimeField(auto_now=True)
+
+  class Meta:
+    verbose_name = "Plano"
+
+  def __unicode__(self):
+    return self.desc +" -------- "+str(self.price)
+
 class Customer(models.Model):
   user = models.OneToOneField(User, on_delete=models.CASCADE)
+  plan = models.ForeignKey(Plan, on_delete=models.CASCADE, null=True)
   cpf = models.CharField(max_length=15, unique=True)
   cel = models.CharField(max_length=15)
   dta_nasc = models.DateField(default=date.today)
